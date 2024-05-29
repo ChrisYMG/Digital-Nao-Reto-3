@@ -15,6 +15,9 @@ pipeline {
             }
         }
         stage('Deploy') {
+            when {
+                branch 'master'
+            }
             steps {
                 echo 'Deploying...'
                 // Aquí van los pasos para desplegar tu proyecto
